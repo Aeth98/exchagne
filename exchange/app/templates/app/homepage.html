@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+{% block title %}
+    <title>Home</title>
+{% endblock %}
+{% block content %}
+    <h6 style="text-align:right;"><a href="{% url 'logoutpage' %}">Logout</a></h6>
+    <h6><a href="{% url 'placeorder' %}">Place an Order</a></h6>
+    <h6><a href="{% url 'history' %}"> My History</a></h6>
+    <h6><a href="{% url 'activeorders' %}">All Market Active Orders</a></h6>
+{% endblock %}

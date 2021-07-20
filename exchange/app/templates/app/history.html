@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+{% block title %}
+    <title>History</title>
+{% endblock %}
+{% block content %}
+{% for order in my_orders %}
+        <div>
+            <h6>datetime: {{ order.datetime }}</h6>
+            <h6>price: {{ order.price }}</h6>
+            <h6>quantity: {{ order.quantity }}</h6>
+            <h6>quantity to be filled: {{ order.quantity_tbf }}</h6>
+            <h6>type: {{ order.type }}</h6>
+            <h6>profit/loss: {{ order.profit_loss }}</h6>
+            <h6>status: {{ order.status }}</h6>
+        </div>
+        <br>
+    {% endfor %}
+<h6>overall profit/loss: {{ user_profile.total_profit_loss }}</h6>
+{% endblock %}

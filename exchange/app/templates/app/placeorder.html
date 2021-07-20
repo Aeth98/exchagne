@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% block title %}
+    <title>Place Order</title>
+{% endblock %}
+{% block content %}
+    <h6>My balance: {{ user_balance }}</h6>
+    <h6>My available balance: {{ user_available_balance }}</h6>
+    <form method="POST" class="form-group">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success" name="type" value="buy">Buy</button>
+        <button type="submit" class="btn btn-success" name="type" value="sell">Sell</button>
+    </form>
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endblock %}

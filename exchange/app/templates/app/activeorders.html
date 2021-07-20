@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% block title %}
+    <title>Active Orders</title>
+{% endblock %}
+{% block content %}
+    {% for order in active_orders_list %}
+        <div>
+            <h6>datetime: {{ order.datetime }}</h6>
+            <h6>price: {{ order.price }}</h6>
+            <h6>quantity: {{ order.quantity }}</h6>
+            <h6>quantity to be filled: {{ order.quantity_tbf }}</h6>
+            <h6>type: {{ order.type }}</h6>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}
