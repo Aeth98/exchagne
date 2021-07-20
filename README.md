@@ -7,6 +7,8 @@ a un prezzo <= 9000 usd, la transazione si conclude. Si considera anche il caso 
 , la transazione avverrebbe comunque, tenendo conto di 1 bitcoin ancora da comprare.
 
 Future migliorie:
+Implementare gli indici avendo utilizzato MongoDB, ho usato come driver una versione di Djongo che da problemi con la creazione di indici, e quindi non ho potuto utilizzarli.
+
 Implementare lo stesso algoritmo anche per chi sta vendendo, infatti per ora gli ordini sell sono "passivi" e vengono eseguiti soltanto se dopo aver immesso l'ordine,
 un secondo utente decide di comprare a quel prezzo o meno. Questo vuol dire che nell'esempio precedente il bitcoin rimanente non verrebbe piu' comprato.
 
